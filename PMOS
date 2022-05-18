@@ -1,0 +1,21 @@
+#include <bits\stdc++.h>
+using namespace std;
+
+struct PMOS {
+    string name, drain, gate, source, body, type;
+    PMOS();
+    PMOS (string,string,string,string);
+    print_netlist();
+};
+
+PMOS::PMOS() {
+    this->name = ""; this->drain = ""; this->gate = ""; this->source = ""; this->body = "vdd"; this->type = "PMOS";
+}
+
+PMOS::PMOS(string name, string drain, string gate, string source) {
+    this->name = name; this->drain = drain; this->gate = gate; this->source = source; this->body = "vdd"; this->type = "PMOS";
+}
+
+PMOS::print_netlist() {
+    cout << this->name << " " << this->drain << " " << this->gate << " " << this->source << " " << this->body << " " << this->type << "\n";
+}
